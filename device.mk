@@ -290,6 +290,7 @@ PRODUCT_PACKAGES += \
     TelephonyResCommon \
     WifiResCommon \
     WifiResTarget \
+    ZenFone8CarrierConfig \
     ZenFone8Frameworks \
     ZenFone8LineageSDK \
     ZenFone8LineageSystemUI \
