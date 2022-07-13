@@ -172,8 +172,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.qti \
     libtinyxml \
-    lights.qcom \
-    vendor.lineage.livedisplay@2.0-service-sdm
+    lights.qcom
 
 # Fastboot
 PRODUCT_PACKAGES += \
@@ -266,7 +265,7 @@ PRODUCT_USES_ESE := false
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    kernel/asus/sm8350
+    kernel/asus/sake
 
 # Networking
 PRODUCT_PACKAGES += \

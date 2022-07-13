@@ -89,7 +89,6 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/hidl/asus_framework_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml \
     vendor/nxp/nfc/vendor_framework_compatibility_matrix.xml \
     vendor/nxp/secure_element/vendor_framework_compatibility_matrix.xml
 
@@ -220,7 +219,7 @@ BOARD_RAMDISK_USE_LZ4 := true
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 TARGET_KERNEL_CONFIG := vendor/$(PRODUCT_DEVICE)_defconfig
-TARGET_KERNEL_SOURCE := kernel/asus/sm8350
+TARGET_KERNEL_SOURCE := kernel/asus/sake
 
 # Partitions
 BOARD_ASUS_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor vendor_dlkm
@@ -236,7 +235,7 @@ BOARD_DTBOIMG_PARTITION_SIZE := 0x1800000
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := $(BOARD_BOOTIMAGE_PARTITION_SIZE)
 
-ifneq ($(WITH_GMS),true)
+ifneq ($(ARROW_GAPS),true)
 ifneq ($(PRODUCT_RO_FILE_SYSTEM),erofs)
 BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 1000000000
 BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 100000000
