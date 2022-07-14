@@ -10,6 +10,8 @@ $(call inherit-product, vendor/asus/sake/sake-vendor.mk)
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
+
 PRODUCT_RO_FILE_SYSTEM ?= ext4
 
 AB_OTA_POSTINSTALL_CONFIG += \
